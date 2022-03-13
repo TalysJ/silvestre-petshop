@@ -1,0 +1,213 @@
+/*Variables*/
+
+:root {
+    --principal: #000000;
+    --secondary: #bcc7c7;
+    --tertiary: #cfe600;
+    --quaternary: #f0ffff;
+    --font-primary: "Architects Daughter", cursive;
+    --clr-primary-hover: #cfe600;
+}
+
+/*Normalize*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HELPERS */
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+    gap: 20px;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.navbar-menu {
+    display: flex;
+    height: 5vh;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    letter-spacing: 3px;
+    color: var(--principal);
+    background-color: var(--secondary);
+    background-size: auto;
+    gap: 2rem;
+    padding: 10px;
+    border-radius: 1rem;
+
+}
+
+.title {
+    display: flex;
+    text-align: center;
+    background-color:var(--principal);
+    width: 100%;
+    height: fit-content;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    align-items: center;
+}
+
+.slogan {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    background-color:var(--principal);
+    width: auto;
+    height: auto;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    align-items: center;
+}
+
+.us  {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    background-color:var(--principal);
+    width: auto;
+    height: auto;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    align-items: center;
+    font-size: small;
+}
+
+.form   {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    align-items: center;
+    max-height: fit-content;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-width: 1rem;
+    border-color: var(--principal);
+    background-color: var(--principal);
+    background-size: cover;
+    
+
+
+}
+
+/*Globals*/
+
+html {
+    display: grid;
+    max-height: 120vh;
+    grid-template-areas:
+        "header"
+        "title"
+        "main-1 main-2 main-3"
+        "footer";
+    background-image: url(../image/cat-dog-face.jpg);
+    font-family: var(--font-primary);
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 30px;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+
+}
+
+.main .main-1 {
+    display: grid;
+    grid-row: 1;
+    grid-column: 1;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    align-items: center;
+    border-style: solid;
+    border-width: 10px;
+    border-color: var(--principal);
+}
+
+.main .main-2 {
+    display: grid;
+    grid-row: 1;
+    grid-column: 2;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    align-items: center;
+    border-style: solid;
+    border-width: 10px;
+    border-color: var(--principal);
+}
+
+.main .main-3 {
+    display: grid;
+    grid-row: 1;
+    grid-column: 3;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    align-items: center;
+    border-style: solid;
+    border-width: 10px;
+    border-color: var(--principal);
+}
+
+.footer {
+    display: grid;
+    background-color: var(--principal);
+    text-align: center;
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    bottom: 0%;
+}
+
+h1 {
+    color: var(--quaternary);
+}
+
+h2 {
+    color: var(--quaternary);
+}
+
+p   {
+    color: var(--quaternary);
+    font-size: large;
+}
+
