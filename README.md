@@ -2,4 +2,4 @@
 
 ## Codigo fuente silvestre petshop
 
-### ver [DEMO](https://talysj.github.io/silvestre-petshop/) del sitio
+### ver [DEMO](https://talysj.github.io/silvestre-petshop/) del sitio.
