@@ -44,6 +44,7 @@
     gap: 2rem;
     padding: 10px;
     border-radius: 1rem;
+    text-shadow: 1px 1px;
 
 }
 
@@ -211,3 +212,19 @@ p   {
     font-size: large;
 }
 
+/* Effects */
+
+a:hover {
+    color:var(--tertiary);
+    transition-duration: 0.3s;
+}
+
+img {
+    opacity: 1.0;
+    transition-duration: 0.3s;
+}
+
+img:hover {
+    opacity: 0.8;
+    transition-duration: 0.3s;
+}
