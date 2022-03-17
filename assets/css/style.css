@@ -117,7 +117,7 @@
 
 html {
     display: grid;
-    max-height: 120vh;
+    max-height: 140vh;
     grid-template-areas:
         "header"
         "title"
@@ -207,11 +207,13 @@ h1 {
 
 h2 {
     color: var(--quaternary);
+    background-color: var(--principal);
+    font-size: medium;
 }
 
 p   {
     color: var(--quaternary);
-    font-size: large;
+    font-size: medium;
 }
 
 /* Effects */
