@@ -117,14 +117,18 @@
 
 html {
     display: grid;
-    max-height: 140vh;
+    max-height: 200vh;
     grid-template-areas:
         "header"
         "title"
         "main-1 main-2 main-3"
         "footer";
-    background-image: url(../image/cat-dog-face.jpg);
     font-family: var(--font-primary);
+    background-image: url(../image/cat-dog-face.jpg);
+}
+
+.bg-primary {
+    background-image: url(../image/cat-dog-face.jpg);
 }
 
 /*
