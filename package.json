@@ -1,0 +1,25 @@
+{
+  "name": "silvestre-petshop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-sass": "node-sass --incluide-path scss sass/index.scss css/main.css",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TalysJ/silvestre-petshop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TalysJ/silvestre-petshop/issues"
+  },
+  "homepage": "https://github.com/TalysJ/silvestre-petshop#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.15"
+  }
+}

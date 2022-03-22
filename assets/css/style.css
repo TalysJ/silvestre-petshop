@@ -131,18 +131,6 @@ html {
     background-image: url(../image/cat-dog-face.jpg);
 }
 
-/*
-header {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-items: center;
-    justify-content: center;
-    width: 100%;
-    gap: 10px;
-}
-*/
-
 .main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -227,16 +215,29 @@ a:hover {
     transition-duration: 0.3s;
 }
 
-img {
-    opacity: 1.0;
-    transition-duration: 0.3s;
-}
-
 img:hover {
-    opacity: 0.8;
     transition-duration: 0.3s;
+    border-style: solid;
+    border-color: var(--principal);
+    border-width: 0.5rem;
 }
 
+.btn {
+    padding: 6px 12px;
+    background: none;
+    border: 2px solid var(--principal);
+    color: var(--principal);
+    font-size: 90%;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn:hover  {
+    box-shadow:  0 0 0 5px #fff,0 0 0 10px var(--principal);
+    border: 2px solid var(--principal);
+    transform: scale(0.9);
+    color: var(--principal);
+}
 
 /* Media Querys */
 
