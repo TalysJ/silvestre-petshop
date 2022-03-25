@@ -1,0 +1,127 @@
+/*Normalize*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Globals*/
+
+html {
+    display: grid;
+    max-height: 200vh;
+    grid-template-areas:
+        "header"
+        "title"
+        "main-1 main-2 main-3"
+        "footer";
+    font-family: $font-primary;
+    background-image: url(../image/cat-dog-face.jpg);
+}
+
+.bg-primary {
+    background-image: url(../image/cat-dog-face.jpg);
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 30px;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+
+    .main-1 {
+        display: grid;
+        grid-row: 1;
+        grid-column: 1;
+        justify-content: center;
+        justify-items: center;
+        text-align: center;
+        align-items: center;
+        border-style: solid;
+        border-width: 10px;
+        border-color: $principal;
+    }
+
+    .main-2 {
+        display: grid;
+        grid-row: 1;
+        grid-column: 2;
+        justify-content: center;
+        justify-items: center;
+        text-align: center;
+        align-items: center;
+        border-style: solid;
+        border-width: 10px;
+        border-color: $principal;
+    }
+
+    .main-3 {
+        display: grid;
+        grid-row: 1;
+        grid-column: 3;
+        justify-content: center;
+        justify-items: center;
+        text-align: center;
+        align-items: center;
+        border-style: solid;
+        border-width: 10px;
+        border-color: $principal;
+    }
+}
+
+h1 {
+    color: $quaternary;
+}
+
+h2 {
+    color: $quaternary;
+    background-color: $principal;
+    font-size: medium;
+}
+
+p   {
+    color: $quaternary;
+    font-size: medium;
+}
+
+/* Effects */
+
+a {
+    &hover {
+        color: $tertiary;
+        transition-duration: 0.3s;
+    }
+}
+
+img {
+
+    &hover  {
+        transition-duration: 0.3s;
+        border-style: solid;
+        border-color: $principal;
+        border-width: 0.5rem;
+    }
+
+}
+
+.btn {
+    padding: 6px 12px;
+    background: none;
+    border: 2px solid $principal;
+    color: $principal;
+    font-size: 90%;
+    cursor: pointer;
+    transition: all 0.3s;
+    &hover  {
+        box-shadow:  0 0 0 5px #fff,0 0 0 10px $principal;
+        border: 2px solid $principal;
+        transform: scale(0.9);
+        color: $principal;
+    }
+}

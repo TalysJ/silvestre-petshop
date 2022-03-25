@@ -1,13 +1,5 @@
-*   {
-    margin: 0;
-    padding: 0;
-}
-
-div {
-    
-    p {
-        color: chartreuse;
-    }
-
-
-}
+@import "./misc/variables";
+@import "./misc/normalize";
+@import "./misc/mixins";
+@import "./partials/header";
+@import "./partials/footer";
