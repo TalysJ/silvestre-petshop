@@ -1,0 +1,43 @@
+header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        justify-items: center;
+        gap: 20px;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+    
+        .navbar-menu {
+            display: flex;
+            height: 5vh;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            justify-items: center;
+            letter-spacing: 3px;
+            color: $principal;
+            background-color: $secondary;
+            background-size: auto;
+            gap: 2rem;
+            padding: 10px;
+            border-radius: 1rem;
+            text-shadow: 1px 1px;
+            
+            &:hover {
+                color: $tertiary;
+            }
+        
+        }
+        
+    }
+}
