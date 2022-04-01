@@ -5,7 +5,7 @@ header {
     justify-items: center;
     justify-content: center;
     width: 100%;
-    gap: 10px;
+    gap: map-get($map:$spacings, $key:medium );
 
     .navbar {
         display: flex;
@@ -13,11 +13,11 @@ header {
         flex-wrap: wrap;
         justify-content: center;
         justify-items: center;
-        gap: 20px;
+        gap: map-get($map:$spacings, $key:medium );
         margin-top: 5vh;
         margin-bottom: 5vh;
     
-        .navbar-menu {
+        .navbar__menu {
             display: flex;
             height: 5vh;
             align-items: center;
@@ -28,8 +28,8 @@ header {
             color: $principal;
             background-color: $secondary;
             background-size: auto;
-            gap: 2rem;
-            padding: 10px;
+            gap: map-get($map:$spacings, $key:small );
+            padding: map-get($map:$spacings, $key:medium );
             border-radius: 1rem;
             text-shadow: 1px 1px;
             

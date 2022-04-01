@@ -44,7 +44,7 @@ html {
         text-align: center;
         align-items: center;
         border-style: solid;
-        border-width: 10px;
+        border-width: map-get($map:$spacings, $key:medium );
         border-color: $principal;
     }
 
@@ -57,7 +57,7 @@ html {
         text-align: center;
         align-items: center;
         border-style: solid;
-        border-width: 10px;
+        border-width: map-get($map:$spacings, $key:medium );
         border-color: $principal;
     }
 
@@ -70,7 +70,7 @@ html {
         text-align: center;
         align-items: center;
         border-style: solid;
-        border-width: 10px;
+        border-width: map-get($map:$spacings, $key:medium );;
         border-color: $principal;
     }
 
@@ -109,3 +109,43 @@ p   {
         color: $principal;
     }
 }
+
+// Media
+
+@media screen and (max-width: 680px) {
+    
+    .html   {
+        max-height: 200vh;
+    }
+    
+    .main  {
+            
+        display: flex;
+        flex-direction: column;
+        font-family: $font-primary;
+        background-image: url(../image/cat-dog-face.jpg);
+    }
+
+    .navbar   {
+        background-size: 50%;
+        gap: map-get($map:$spacings, $key:small );
+        @include letra (50%);
+
+    }
+
+    .title {
+        @include letra (50%);
+        padding-left: map-get($map:$spacings, $key:small );
+        padding-right: map-get($map:$spacings, $key:small );
+        text-justify: auto;
+    }
+
+    .slogan {
+        @include letra (50%);
+    }
+
+    .us  {
+        font-size: 70%;
+    }
+}
+

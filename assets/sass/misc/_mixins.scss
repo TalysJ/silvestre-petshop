@@ -1,9 +1,5 @@
 /* HELPERS */
 
-
-
-
-
 .title {
     display: flex;
     text-align: center;
@@ -45,7 +41,6 @@
     justify-items: center;
     text-align: center;
     align-items: center;
-    font-size: small;
 }
 
 .form   {
@@ -65,6 +60,9 @@
     background-color: $principal;
     background-size: cover;
     
-
-
 }
+
+@mixin letra ($font-size) {
+    font-size: 50%;
+}
+
