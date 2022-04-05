@@ -1,3 +1,5 @@
+// Only Navbar 
+
 header {
     display: flex;
     flex-direction: row;
@@ -6,7 +8,7 @@ header {
     justify-content: center;
     width: 100%;
     gap: map-get($map:$spacings, $key:medium );
-
+    
     .navbar {
         display: flex;
         flex-direction: row;
@@ -16,7 +18,7 @@ header {
         gap: map-get($map:$spacings, $key:medium );
         margin-top: 5vh;
         margin-bottom: 5vh;
-    
+        
         .navbar__menu {
             display: flex;
             height: 5vh;
@@ -31,13 +33,15 @@ header {
             gap: map-get($map:$spacings, $key:small );
             padding: map-get($map:$spacings, $key:medium );
             border-radius: 1rem;
-            text-shadow: 1px 1px;
             
             &:hover {
                 color: $tertiary;
             }
-        
+
+            &.active {
+                color: $active;
+            }
         }
-        
     }
 }
+

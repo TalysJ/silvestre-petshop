@@ -14,13 +14,10 @@ html {
     grid-template-areas:
         "header"
         "title"
+        "slogan"
         "main-1 main-2 main-3"
         "footer";
     font-family: $font-primary;
-    background-image: url(../image/cat-dog-face.jpg);
-}
-
-.bg-primary {
     background-image: url(../image/cat-dog-face.jpg);
 }
 
@@ -79,6 +76,12 @@ html {
         transition-duration: 0.3s;
         transform: scale(1.2);
     }
+
+    img:hover {
+        color: $tertiary;
+        transition-duration: 0.3s;
+        transform: scale(1.1);
+    }
 }
 
 h1 {
@@ -87,7 +90,6 @@ h1 {
 
 h2 {
     color: $quaternary;
-    background-color: $principal;
     font-size: medium;
 }
 
@@ -100,7 +102,6 @@ p   {
     padding: 6px 12px;
     background: none;
     color: $principal;
-    font-size: 90%;
     cursor: pointer;
     transition-duration: 0.3s;
     &:hover  {
@@ -112,40 +113,51 @@ p   {
 
 // Media
 
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 766px) {
     
     .html   {
         max-height: 200vh;
     }
     
     .main  {
-            
         display: flex;
         flex-direction: column;
         font-family: $font-primary;
-        background-image: url(../image/cat-dog-face.jpg);
     }
 
     .navbar   {
         background-size: 50%;
         gap: map-get($map:$spacings, $key:small );
-        @include letra (50%);
-
+        @include letra (80%);
     }
-
+    
     .title {
-        @include letra (50%);
+        @include letra (80%);
         padding-left: map-get($map:$spacings, $key:small );
         padding-right: map-get($map:$spacings, $key:small );
         text-justify: auto;
     }
 
     .slogan {
-        @include letra (50%);
+        @include letra (80%);
     }
 
     .us  {
-        font-size: 70%;
+        @include letra (80%);
     }
 }
 
+// keyframes
+
+@keyframes example {
+    from {background-position-x: right;}
+    to {background-position-x: left;}
+    }
+
+    html  {
+    animation-name: example;
+    animation-delay: 0s;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    }
