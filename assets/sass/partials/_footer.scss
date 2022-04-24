@@ -1,12 +1,5 @@
-.footer__content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $principal;
-    height: 7vh;
-    width: 100%;
-    position: absolute;
-    flex-direction: row;
+footer {
+    position: fixed;
     bottom: 0%;
-
+    width: 100%;
 }

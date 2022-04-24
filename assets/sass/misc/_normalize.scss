@@ -24,70 +24,6 @@ body {
     height: 86.7vh;
 }
 
-.body__main {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 30px;
-    justify-content: center;
-    justify-items: center;
-    text-align: center;
-    align-items: center;
-    margin-top: 4vh;
-    margin-bottom: 4vh;
-
-    .body__main-1 {
-        display: grid;
-        grid-row: 1;
-        grid-column: 1;
-        justify-content: center;
-        justify-items: center;
-        text-align: center;
-        align-items: center;
-        border-style: solid;
-        border-width: map-get($map:$spacings, $key:medium);
-        border-color: $principal;
-    }
-
-    .body__main-2 {
-        display: grid;
-        grid-row: 1;
-        grid-column: 2;
-        justify-content: center;
-        justify-items: center;
-        text-align: center;
-        align-items: center;
-        border-style: solid;
-        border-width: map-get($map:$spacings, $key:medium);
-        border-color: $principal;
-    }
-
-    .body__main-3 {
-        display: grid;
-        grid-row: 1;
-        grid-column: 3;
-        justify-content: center;
-        justify-items: center;
-        text-align: center;
-        align-items: center;
-        border-style: solid;
-        border-width: map-get($map:$spacings, $key:medium);
-        ;
-        border-color: $principal;
-    }
-
-    a:hover {
-        color: $tertiary;
-        transition-duration: 0.3s;
-        transform: scale(1.2);
-    }
-
-    img:hover {
-        color: $tertiary;
-        transition-duration: 0.3s;
-        transform: scale(1.1);
-    }
-}
-
 h1 {
     color: $quaternary;
 }
@@ -118,14 +54,11 @@ p {
 
 // Media
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (orientation:portrait) {
 
-    html {
-        max-height: fit-content;
-    }
-
+    html,
     body {
-        max-height: fit-content;
+        height: 100%;
     }
 
     .title {
@@ -164,7 +97,7 @@ p {
         display: flex;
         flex-direction: column;
         font-family: $font-primary;
-        max-height: fit-content;
+        margin-bottom: 15vh;
     }
 
     .header1 {
@@ -175,6 +108,10 @@ p {
             background-size: 30%;
             gap: map-get($map:$spacings, $key:small);
             @include letra (85%);
+            padding-left: 0%;
+            padding-right: 0%;
+            margin-top: 20px;
+            margin-bottom: 20px;
 
             .navbar__menu {
                 display: flex;
@@ -209,21 +146,66 @@ p {
         max-height: 60%;
     }
 
-    .footer__content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        background-color: $principal;
-        height: 3.5vh;
-        width: 100%;
-        position: fixed;
-        bottom: 0%;
-        margin-bottom: -45vh;
-
-        .footer_fontsize {
-            @include letra (85%);
+    @keyframes example {
+        from {
+            background-position-x: right;
         }
+
+        to {
+            background-position-x: left;
+        }
+    }
+
+    body {
+        animation-name: example;
+        animation-delay: 0s;
+        animation-duration: 40s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+}
+
+@media only screen and (orientation: landscape) {
+    .form__1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        text-align: center;
+        align-items: center;
+        border-style: solid;
+        gap: 4px;
+        border-color: $principal;
+        background-color: $principal;
+        background-size: cover;
+        margin: auto;
+    }
+
+    .body__main {
+        display: flex;
+        flex-direction: row;
+        font-family: $font-primary;
+        justify-content: center;
+        padding-bottom: 20vh;
+        margin-bottom: auto;
+    }
+
+    @keyframes example {
+        from {
+            background-position-x: right;
+        }
+
+        to {
+            background-position-x: left;
+        }
+    }
+
+    body {
+        animation-name: example;
+        animation-delay: 0s;
+        animation-duration: 40s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
     }
 }
 
