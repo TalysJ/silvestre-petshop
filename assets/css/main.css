@@ -134,11 +134,11 @@ body {
     border-width: 10px;
     border-color: #000000; }
   .body__main a:hover {
-    color: #cfe600;
+    color: #0008f9;
     transition-duration: 0.3s;
     transform: scale(1.2); }
   .body__main img:hover {
-    color: #cfe600;
+    color: #0008f9;
     transition-duration: 0.3s;
     transform: scale(1.1); }
 
@@ -170,7 +170,7 @@ p {
   body {
     max-height: fit-content; }
   .title {
-    font-size: 70%;
+    font-size: 85%;
     padding-left: 5px;
     padding-right: 5px;
     text-justify: auto; }
@@ -179,7 +179,7 @@ p {
     flex-direction: column;
     font-family: "Architects Daughter", cursive; }
     .body__content .us {
-      font-size: 70%; }
+      font-size: 85%; }
   .form__1 {
     display: flex;
     flex-direction: column;
@@ -204,7 +204,7 @@ p {
     .header1 .navbar1 {
       background-size: 30%;
       gap: 5px;
-      font-size: 70%; }
+      font-size: 85%; }
       .header1 .navbar1 .navbar__menu {
         display: flex;
         height: 1vh;
@@ -222,11 +222,11 @@ p {
         margin: 1px;
         padding: 1px; }
         .header1 .navbar1 .navbar__menu:hover {
-          color: #cfe600; }
+          color: #0008f9; }
         .header1 .navbar1 .navbar__menu.active {
-          color: #f9f100; }
+          color: #0008f9; }
   .slogan {
-    font-size: 70%;
+    font-size: 85%;
     max-height: 60%; }
   .footer__content {
     display: flex;
@@ -240,7 +240,7 @@ p {
     bottom: 0%;
     margin-bottom: -45vh; }
     .footer__content .footer_fontsize {
-      font-size: 70%; } }
+      font-size: 85%; } }
 
 @keyframes example {
   from {
@@ -290,9 +290,9 @@ body {
       padding: 10px;
       border-radius: 1rem; }
       .header1 .navbar1 .navbar__menu:hover {
-        color: #cfe600; }
+        color: #0008f9; }
       .header1 .navbar1 .navbar__menu.active {
-        color: #f9f100; }
+        color: #0008f9; }
 
 .footer__content {
   display: flex;

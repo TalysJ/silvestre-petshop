@@ -129,7 +129,7 @@ p {
     }
 
     .title {
-        @include letra (80%);
+        @include letra (85%);
         padding-left: map-get($map:$spacings, $key:small);
         padding-right: map-get($map:$spacings, $key:small);
         text-justify: auto;
@@ -141,7 +141,7 @@ p {
         font-family: $font-primary;
 
         .us {
-            @include letra (80%);
+            @include letra (85%);
         }
     }
 
@@ -174,7 +174,7 @@ p {
         .navbar1 {
             background-size: 30%;
             gap: map-get($map:$spacings, $key:small);
-            @include letra (80%);
+            @include letra (85%);
 
             .navbar__menu {
                 display: flex;
@@ -205,7 +205,7 @@ p {
     }
 
     .slogan {
-        @include letra (80%);
+        @include letra (85%);
         max-height: 60%;
     }
 
@@ -222,7 +222,7 @@ p {
         margin-bottom: -45vh;
 
         .footer_fontsize {
-            @include letra (80%);
+            @include letra (85%);
         }
     }
 }
