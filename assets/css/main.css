@@ -12,10 +12,10 @@
   text-align: center;
   align-items: center; }
 
-.container {
+.body__content {
   justify-content: center;
   text-align: center; }
-  .container .slogan {
+  .body__content .slogan {
     display: flex;
     text-align: center;
     flex-wrap: wrap;
@@ -35,8 +35,9 @@
     border-width: 1rem;
     border-color: #000000;
     background-color: #000000;
-    background-size: cover; }
-  .container .form {
+    background-size: cover;
+    font-size: medium; }
+  .body__content .form__1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -48,11 +49,12 @@
     margin-left: auto;
     margin-right: auto;
     border-style: solid;
-    border-width: 1rem;
+    border-width: 2rem;
+    gap: 4px;
     border-color: #000000;
     background-color: #000000;
     background-size: cover; }
-  .container .us {
+  .body__content .us {
     display: flex;
     flex-wrap: wrap;
     text-align: center;
@@ -81,12 +83,14 @@
 /*Globals*/
 html {
   display: grid;
-  max-height: 200vh;
   grid-template-areas: "header" "title" "slogan" "main-1 main-2 main-3" "footer";
-  font-family: "Architects Daughter", cursive;
-  background-image: url(../image/cat-dog-face.jpg); }
+  font-family: "Architects Daughter", cursive; }
 
-.main {
+body {
+  background-image: url(../image/cat-dog-face.jpg) !important;
+  height: 86.7vh; }
+
+.body__main {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 30px;
@@ -94,9 +98,9 @@ html {
   justify-items: center;
   text-align: center;
   align-items: center;
-  margin-top: 5vh;
-  margin-bottom: 5vh; }
-  .main .main-1 {
+  margin-top: 4vh;
+  margin-bottom: 4vh; }
+  .body__main .body__main-1 {
     display: grid;
     grid-row: 1;
     grid-column: 1;
@@ -107,7 +111,7 @@ html {
     border-style: solid;
     border-width: 10px;
     border-color: #000000; }
-  .main .main-2 {
+  .body__main .body__main-2 {
     display: grid;
     grid-row: 1;
     grid-column: 2;
@@ -118,7 +122,7 @@ html {
     border-style: solid;
     border-width: 10px;
     border-color: #000000; }
-  .main .main-3 {
+  .body__main .body__main-3 {
     display: grid;
     grid-row: 1;
     grid-column: 3;
@@ -129,11 +133,11 @@ html {
     border-style: solid;
     border-width: 10px;
     border-color: #000000; }
-  .main a:hover {
+  .body__main a:hover {
     color: #cfe600;
     transition-duration: 0.3s;
     transform: scale(1.2); }
-  .main img:hover {
+  .body__main img:hover {
     color: #cfe600;
     transition-duration: 0.3s;
     transform: scale(1.1); }
@@ -149,37 +153,94 @@ p {
   color: #f0ffff;
   font-size: medium; }
 
-.btn {
+.navbtn {
   padding: 6px 12px;
   background: none;
   color: #000000;
   cursor: pointer;
   transition-duration: 0.3s; }
-  .btn:hover {
+  .navbtn:hover {
     box-shadow: 0 0 0 5px transparent, 0 0 0 0 #000000;
     transform: scale(1.2);
     color: #000000; }
 
-@media screen and (max-width: 766px) {
-  .html {
-    max-height: 200vh; }
-  .main {
-    display: flex;
-    flex-direction: column;
-    font-family: "Architects Daughter", cursive; }
-  .navbar {
-    background-size: 50%;
-    gap: 5px;
-    font-size: 70%; }
+@media screen and (max-width: 768px) {
+  html {
+    max-height: fit-content; }
+  body {
+    max-height: fit-content; }
   .title {
     font-size: 70%;
     padding-left: 5px;
     padding-right: 5px;
     text-justify: auto; }
+  .body__content {
+    display: flex;
+    flex-direction: column;
+    font-family: "Architects Daughter", cursive; }
+    .body__content .us {
+      font-size: 70%; }
+  .form__1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    align-items: center;
+    border-style: solid;
+    border-width: 1rem;
+    gap: 4px;
+    border-color: #000000;
+    background-color: #000000;
+    background-size: cover; }
+  .body__main {
+    display: flex;
+    flex-direction: column;
+    font-family: "Architects Daughter", cursive;
+    max-height: fit-content; }
+  .header1 {
+    margin-top: 0%;
+    max-height: 20vh; }
+    .header1 .navbar1 {
+      background-size: 30%;
+      gap: 5px;
+      font-size: 70%; }
+      .header1 .navbar1 .navbar__menu {
+        display: flex;
+        height: 1vh;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        justify-items: center;
+        letter-spacing: 1px;
+        color: #000000;
+        background-color: #bcc7c7;
+        background-size: cover;
+        gap: 5px;
+        padding: 10px;
+        border-radius: 2px;
+        margin: 1px;
+        padding: 1px; }
+        .header1 .navbar1 .navbar__menu:hover {
+          color: #cfe600; }
+        .header1 .navbar1 .navbar__menu.active {
+          color: #f9f100; }
   .slogan {
-    font-size: 70%; }
-  .us {
-    font-size: 70%; } }
+    font-size: 70%;
+    max-height: 60%; }
+  .footer__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #000000;
+    height: 3.5vh;
+    width: 100%;
+    position: fixed;
+    bottom: 0%;
+    margin-bottom: -45vh; }
+    .footer__content .footer_fontsize {
+      font-size: 70%; } }
 
 @keyframes example {
   from {
@@ -187,14 +248,14 @@ p {
   to {
     background-position-x: left; } }
 
-html {
+body {
   animation-name: example;
   animation-delay: 0s;
-  animation-duration: 60s;
+  animation-duration: 40s;
   animation-iteration-count: infinite;
   animation-direction: alternate; }
 
-header {
+.header1 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -202,7 +263,7 @@ header {
   justify-content: center;
   width: 100%;
   gap: 10px; }
-  header .navbar {
+  .header1 .navbar1 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -211,7 +272,10 @@ header {
     gap: 10px;
     margin-top: 5vh;
     margin-bottom: 5vh; }
-    header .navbar .navbar__menu {
+    .header1 .navbar1 .header1,
+    .header1 .navbar1 li {
+      list-style: none; }
+    .header1 .navbar1 .navbar__menu {
       display: flex;
       height: 5vh;
       align-items: center;
@@ -225,16 +289,18 @@ header {
       gap: 5px;
       padding: 10px;
       border-radius: 1rem; }
-      header .navbar .navbar__menu:hover {
+      .header1 .navbar1 .navbar__menu:hover {
         color: #cfe600; }
-      header .navbar .navbar__menu.active {
+      .header1 .navbar1 .navbar__menu.active {
         color: #f9f100; }
 
-.footer {
-  display: grid;
+.footer__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #000000;
-  text-align: center;
+  height: 7vh;
   width: 100%;
-  height: 10vh;
-  position: fixed;
+  position: absolute;
+  flex-direction: row;
   bottom: 0%; }

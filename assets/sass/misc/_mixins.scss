@@ -13,11 +13,11 @@
     align-items: center;
 }
 
-.container {
+.body__content {
 
     justify-content: center;
     text-align: center;
-    
+
     .slogan {
         display: flex;
         text-align: center;
@@ -39,9 +39,10 @@
         border-color: $principal;
         background-color: $principal;
         background-size: cover;
+        font-size: medium;
     }
 
-    .form   {
+    .form__1 {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -53,13 +54,14 @@
         margin-left: auto;
         margin-right: auto;
         border-style: solid;
-        border-width: 1rem;
+        border-width: 2rem;
+        gap: 4px;
         border-color: $principal;
         background-color: $principal;
         background-size: cover;
     }
-    
-    .us  {
+
+    .us {
         display: flex;
         flex-wrap: wrap;
         text-align: center;

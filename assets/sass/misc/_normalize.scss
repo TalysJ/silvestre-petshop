@@ -10,7 +10,6 @@
 
 html {
     display: grid;
-    max-height: 200vh;
     grid-template-areas:
         "header"
         "title"
@@ -18,10 +17,14 @@ html {
         "main-1 main-2 main-3"
         "footer";
     font-family: $font-primary;
-    background-image: url(../image/cat-dog-face.jpg);
 }
 
-.main {
+body {
+    background-image: url(../image/cat-dog-face.jpg) !important;
+    height: 86.7vh;
+}
+
+.body__main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 30px;
@@ -29,10 +32,10 @@ html {
     justify-items: center;
     text-align: center;
     align-items: center;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
 
-    .main-1 {
+    .body__main-1 {
         display: grid;
         grid-row: 1;
         grid-column: 1;
@@ -41,11 +44,11 @@ html {
         text-align: center;
         align-items: center;
         border-style: solid;
-        border-width: map-get($map:$spacings, $key:medium );
+        border-width: map-get($map:$spacings, $key:medium);
         border-color: $principal;
     }
 
-    .main-2 {
+    .body__main-2 {
         display: grid;
         grid-row: 1;
         grid-column: 2;
@@ -54,11 +57,11 @@ html {
         text-align: center;
         align-items: center;
         border-style: solid;
-        border-width: map-get($map:$spacings, $key:medium );
+        border-width: map-get($map:$spacings, $key:medium);
         border-color: $principal;
     }
 
-    .main-3 {
+    .body__main-3 {
         display: grid;
         grid-row: 1;
         grid-column: 3;
@@ -67,7 +70,8 @@ html {
         text-align: center;
         align-items: center;
         border-style: solid;
-        border-width: map-get($map:$spacings, $key:medium );;
+        border-width: map-get($map:$spacings, $key:medium);
+        ;
         border-color: $principal;
     }
 
@@ -93,19 +97,20 @@ h2 {
     font-size: medium;
 }
 
-p   {
+p {
     color: $quaternary;
     font-size: medium;
 }
 
-.btn {
+.navbtn {
     padding: 6px 12px;
     background: none;
     color: $principal;
     cursor: pointer;
     transition-duration: 0.3s;
-    &:hover  {
-        box-shadow:  0 0 0 5px transparent,0 0 0 0 $principal;
+
+    &:hover {
+        box-shadow: 0 0 0 5px transparent, 0 0 0 0 $principal;
         transform: scale(1.2);
         color: $principal;
     }
@@ -113,51 +118,131 @@ p   {
 
 // Media
 
-@media screen and (max-width: 766px) {
-    
-    .html   {
-        max-height: 200vh;
+@media screen and (max-width: 768px) {
+
+    html {
+        max-height: fit-content;
     }
-    
-    .main  {
+
+    body {
+        max-height: fit-content;
+    }
+
+    .title {
+        @include letra (80%);
+        padding-left: map-get($map:$spacings, $key:small);
+        padding-right: map-get($map:$spacings, $key:small);
+        text-justify: auto;
+    }
+
+    .body__content {
         display: flex;
         flex-direction: column;
         font-family: $font-primary;
+
+        .us {
+            @include letra (80%);
+        }
     }
 
-    .navbar   {
-        background-size: 50%;
-        gap: map-get($map:$spacings, $key:small );
-        @include letra (80%);
+    .form__1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        text-align: center;
+        align-items: center;
+        border-style: solid;
+        border-width: 1rem;
+        gap: 4px;
+        border-color: $principal;
+        background-color: $principal;
+        background-size: cover;
     }
-    
-    .title {
-        @include letra (80%);
-        padding-left: map-get($map:$spacings, $key:small );
-        padding-right: map-get($map:$spacings, $key:small );
-        text-justify: auto;
+
+    .body__main {
+        display: flex;
+        flex-direction: column;
+        font-family: $font-primary;
+        max-height: fit-content;
+    }
+
+    .header1 {
+        margin-top: 0%;
+        max-height: 20vh;
+
+        .navbar1 {
+            background-size: 30%;
+            gap: map-get($map:$spacings, $key:small);
+            @include letra (80%);
+
+            .navbar__menu {
+                display: flex;
+                height: 1vh;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+                justify-items: center;
+                letter-spacing: 1px;
+                color: $principal;
+                background-color: $secondary;
+                background-size: cover;
+                gap: map-get($map:$spacings, $key:small);
+                padding: map-get($map:$spacings, $key:medium);
+                border-radius: 2px;
+                margin: 1px;
+                padding: 1px;
+
+                &:hover {
+                    color: $tertiary;
+                }
+
+                &.active {
+                    color: $active;
+                }
+            }
+        }
     }
 
     .slogan {
         @include letra (80%);
+        max-height: 60%;
     }
 
-    .us  {
-        @include letra (80%);
+    .footer__content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: $principal;
+        height: 3.5vh;
+        width: 100%;
+        position: fixed;
+        bottom: 0%;
+        margin-bottom: -45vh;
+
+        .footer_fontsize {
+            @include letra (80%);
+        }
     }
 }
 
 // keyframes
 
 @keyframes example {
-    from {background-position-x: right;}
-    to {background-position-x: left;}
+    from {
+        background-position-x: right;
     }
 
-    html  {
+    to {
+        background-position-x: left;
+    }
+}
+
+body {
     animation-name: example;
     animation-delay: 0s;
-    animation-duration: 60s;
+    animation-duration: 40s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-    }
+}

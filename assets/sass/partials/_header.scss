@@ -1,24 +1,30 @@
 // Only Navbar 
 
-header {
+.header1 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-items: center;
     justify-content: center;
     width: 100%;
-    gap: map-get($map:$spacings, $key:medium );
-    
-    .navbar {
+    gap: map-get($map:$spacings, $key:medium);
+
+    .navbar1 {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
         justify-items: center;
-        gap: map-get($map:$spacings, $key:medium );
+        gap: map-get($map:$spacings, $key:medium);
         margin-top: 5vh;
         margin-bottom: 5vh;
-        
+
+        .header1,
+        li {
+            list-style: none;
+
+        }
+
         .navbar__menu {
             display: flex;
             height: 5vh;
@@ -30,10 +36,10 @@ header {
             color: $principal;
             background-color: $secondary;
             background-size: auto;
-            gap: map-get($map:$spacings, $key:small );
-            padding: map-get($map:$spacings, $key:medium );
+            gap: map-get($map:$spacings, $key:small);
+            padding: map-get($map:$spacings, $key:medium);
             border-radius: 1rem;
-            
+
             &:hover {
                 color: $tertiary;
             }
@@ -44,4 +50,3 @@ header {
         }
     }
 }
-
